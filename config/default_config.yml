@@ -1,0 +1,36 @@
+# Default configuration for AutoAceVoice
+
+# Voice recognition settings
+voice_recognition:
+  engine: "local"  # Options: "local", "google", "azure"
+  language: "en-US"
+  sensitivity: 0.7
+  noise_reduction: true
+  timeout: 5  # seconds
+
+# Command processing
+command_processing:
+  prefix: "ace"  # Wake word
+  confidence_threshold: 0.6
+  command_timeout: 10  # seconds
+  fallback_command: "help"
+
+# System integration
+system:
+  startup_sound: true
+  notification_sounds: true
+  log_level: "info"  # Options: "debug", "info", "warning", "error"
+  log_file: "logs/autoace.log"
+
+# User interface
+ui:
+  theme: "dark"  # Options: "light", "dark", "system"
+  show_confidence: false
+  display_mode: "minimal"  # Options: "minimal", "standard", "detailed"
+
+# Plugins
+plugins:
+  enabled: true
+  directory: "plugins"
+  autoload: true
+  allowed_sources: ["local", "verified"]
